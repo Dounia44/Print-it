@@ -28,3 +28,12 @@ arrowLeft.addEventListener('click' , () => {
 arrowRight.addEventListener('click' , () => {
 	console.log('Flèche droite cliquée')
 })
+
+//Je rajoute les points sous le carrousel
+const dotsContainer = document.querySelector('.dots')  
+
+for (let i = 0; i < slides.length; i++) {
+	const dot = document.createElement('div')		// crée un petit point
+	dot.classList.add('dot')			// lui ajoute la classe CSS "dot"
+	dotsContainer.appendChild(dot)		 // l'ajoute dans la page (dans .dots)
+}
