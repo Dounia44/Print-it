@@ -16,3 +16,15 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+//Je cible les flèches 
+const arrowLeft = document.querySelector(".arrow_left")
+const arrowRight = document.querySelector(".arrow_right")
+
+arrowLeft.addEventListener('click' , () => {
+	console.log('Flèche gauche cliquée')
+})
+
+arrowRight.addEventListener('click' , () => {
+	console.log('Flèche droite cliquée')
+})
