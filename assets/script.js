@@ -33,7 +33,12 @@ arrowRight.addEventListener('click' , () => {
 const dotsContainer = document.querySelector('.dots')  
 
 for (let i = 0; i < slides.length; i++) {
-	const dot = document.createElement('div')		// crée un petit point
-	dot.classList.add('dot')			// lui ajoute la classe CSS "dot"
-	dotsContainer.appendChild(dot)		 // l'ajoute dans la page (dans .dots)
+	const dot = document.createElement('div')	// Crée un petit point
+	dot.classList.add('dot')					// Ajoute la classe CSS "dot"
+
+	if (i === 0) {								
+		dot.classList.add('dot_selected')		// Active le premier point par défaut
+	}
+
+	dotsContainer.appendChild(dot)		 		// Ajoute le/les point(s) au conteneur
 }
