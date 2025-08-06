@@ -17,6 +17,9 @@ const slides = [
 	}
 ]
 
+let currentSlide = 0; 			//Déclarer la varible qui Contien la position de la diapositive actuellement affiché(i = 0, je suis à l'image 0)
+							
+
 //Je cible les flèches 
 const arrowLeft = document.querySelector(".arrow_left")
 const arrowRight = document.querySelector(".arrow_right")
@@ -28,7 +31,7 @@ arrowLeft.addEventListener('click' , () => {
 arrowRight.addEventListener('click' , () => {
 	console.log('Flèche droite cliquée')
 })
-
+		
 //Je rajoute les points sous le carrousel
 const dotsContainer = document.querySelector('.dots')  
 
