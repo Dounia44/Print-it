@@ -18,7 +18,8 @@ const slides = [
 ]
 
 let currentSlide = 0; 			//Déclarer la varible qui Contien la position de la diapositive actuellement affiché(i = 0, je suis à l'image 0)
-							
+const bannerImage = document.querySelector(".banner-img")		//2.Cibler les éléments à modifier (Banner et img)
+const bannerText = document.querySelector("#banner p")							
 
 //Je cible les flèches 
 const arrowLeft = document.querySelector(".arrow_left")
