@@ -49,7 +49,11 @@ arrowLeft.addEventListener('click' , () => {
 
 	currentSlide--;																	//Je décrémente l'index de la diapo
 
-	dots[currentSlide].classList.add("dot_selected")								
+	if (currentSlide <0) {															// Si l'index devient inférieur à 0, on revient à la dernière diapositive (slides.length - 1)
+		currentSlide = slides.length -1;										
+	}
+
+	dots[currentSlide].classList.add("dot_selected");								
 
 	bannerImg.src = "./assets/images/slideshow/" + slides[currentSlide].image;		
 
@@ -63,7 +67,11 @@ arrowRight.addEventListener('click' , () => {										//Ajouter un écouteur de
 
 	currentSlide++; 																// 2. J'incrémente l'index de la diapo
 
-	dots[currentSlide].classList.add("dot_selected")								// 3. J'ajoute la class "dot_selected" de la dot actuelle 
+	if (currentSlide >= slides.length) {
+		currentSlide = 0;
+	}
+
+	dots[currentSlide].classList.add("dot_selected");								// 3. J'ajoute la class "dot_selected" de la dot actuelle 
 
 	bannerImg.src = "./assets/images/slideshow/" + slides[currentSlide].image;		// 4. On va chercher le lien de l'image dans le tableau Slides et on modifie l'attribut "src" 
 
